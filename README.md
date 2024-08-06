@@ -54,7 +54,7 @@ You can customize the behavior of the `AdaptiveComputationLayer` by adding diffe
 
 ```python
 # Example usage
-trainer = EvolutionaryTrainer(population_size=100, input_dim=10, output_dim=1)
+trainer = SynchronousEvolutionaryTrainer(population_size=100, input_dim=10, output_dim=1)
 evaluation_function = lambda network: evaluation_function(network, train_loader, val_loader, 5, 0.001, 32, 'cuda')
 trainer.evolve(generations=1000, evaluation_function=evaluation_function, retain_top=0.5, random_select=0.1, mutate_chance=0.3)
 ```
