@@ -50,7 +50,7 @@ class AsynchronousEvolutionaryTrainer:
         print(visualization)
         file_name = "Best Computation Order.txt"
         with open(file_name, "w") as file:
-            file.write(visualization = best_model.adaptive_layer.visualize_operations())
+            file.write(visualization)
 
 
         
