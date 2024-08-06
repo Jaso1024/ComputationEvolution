@@ -46,7 +46,14 @@ class AsynchronousEvolutionaryTrainer:
         return score
     
     def visualize_best(self, best_model):
-        print(best_model.adaptive_layer.visualize_operations())
+        visualization = best_model.adaptive_layer.visualize_operations()
+        print(visualization)
+        file_name = "Best Computation Order.txt"
+        with open(file_name, "w") as file:
+            file.write(visualization = best_model.adaptive_layer.visualize_operations())
+
+
+        
 
     def evolve_async(self, num_evaluations, evaluation_function, tournament_size=3, mutate_chance=0.3):
         pbar = tqdm(total=num_evaluations, desc="Evaluations")

@@ -74,7 +74,11 @@ class SynchronousEvolutionaryTrainer:
                 self.visualize_best(generation, self.population[top_indices[0]])
 
     def visualize_best(self, generation, best_model):
-        print(best_model.adaptive_layer.visualize_operations())
+        visualization = best_model.adaptive_layer.visualize_operations()
+        print(visualization)
+        file_name = "Best Computation Order.txt"
+        with open(file_name, "w") as file:
+            file.write(visualization = best_model.adaptive_layer.visualize_operations())
 
     def _generate_new_population(self, parents):
         new_population = []
