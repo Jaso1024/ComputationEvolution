@@ -10,6 +10,7 @@ Computation Evolution is a Python-based framework for evolving neural network ar
 - **CustomModel**: A neural network model incorporating adaptive computation layers.
 - **Evolutionary Training**: Includes both synchronous and asynchronous training modes to evolve a population of neural networks.
 - **Mutation and Crossover**: Implements mechanisms for mutating the network structure and combining parents to generate new models.
+- **Caching**: Initial generations take longer, however as training continues, the number of necessary evaluations decreases.
 
 ## Installation
 
